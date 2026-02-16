@@ -1,0 +1,26 @@
+{
+  "name": "Sinai Digital",
+  "short_name": "Sinai Digital",
+  "description": "Custom websites for small businesses",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a2332",
+  "theme_color": "#1a2332",
+  "icons": [
+    {
+      "src": "/images/sinai-digital-icon-inverse-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/sinai-digital-icon-inverse-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/sinai-digital-icon-inverse-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
