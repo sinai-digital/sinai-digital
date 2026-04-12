@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const navLinks = [
   { label: 'Work', href: '#work' },
-  { label: 'Services', href: '#services' },
+  { label: 'Approach', href: '#approach' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -25,29 +25,40 @@ export default function Nav() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white border-b border-brand-text-blue/[0.08] shadow-[0_1px_8px_rgba(0,0,0,0.06)]'
+          ? 'bg-white border-b border-brand-dark-navy/[0.08] shadow-[0_1px_8px_rgba(0,0,0,0.06)]'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="container-custom flex items-center justify-between h-[72px]">
-        {/* Logo — dual-image crossfade */}
-        <a href="#hero" className="flex-shrink-0 relative w-[148px] h-[30px]">
-          <Image
-            src="/images/sinai-digital-lockup-inverse-256.png"
-            alt="Sinai Digital"
-            width={148}
-            height={30}
-            priority
-            className={`transition-opacity duration-500 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
-          />
-          <Image
-            src="/images/sinai-digital-lockup-256.png"
-            alt="Sinai Digital"
-            width={148}
-            height={30}
-            priority
-            className={`absolute inset-0 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
-          />
+        {/* Lockup: icon + wordmark composed in code (v2 brand: icon-only mark + Josefin wordmark) */}
+        <a href="#hero" className="flex-shrink-0 flex items-center gap-3 group">
+          <span className="relative w-9 h-[30px]">
+            {/* Inverse (color flame on white mountain) for dark hero */}
+            <Image
+              src="/images/sinai-digital-icon-inverse.svg"
+              alt=""
+              width={36}
+              height={30}
+              priority
+              className={`absolute inset-0 transition-opacity duration-500 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+            />
+            {/* Primary (full color) for scrolled white nav */}
+            <Image
+              src="/images/sinai-digital-icon.svg"
+              alt=""
+              width={36}
+              height={30}
+              priority
+              className={`absolute inset-0 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
+            />
+          </span>
+          <span
+            className={`brand-heading text-[13px] !tracking-[0.28em] transition-colors duration-500 ${
+              scrolled ? 'text-brand-dark-navy' : 'text-white'
+            }`}
+          >
+            Sinai Digital
+          </span>
         </a>
 
         {/* Desktop links */}
@@ -63,7 +74,7 @@ export default function Nav() {
         <button
           className={`md:hidden p-2 transition-colors ${
             scrolled
-              ? 'text-brand-text-blue/70 hover:text-brand-text-blue'
+              ? 'text-brand-dark-navy/70 hover:text-brand-dark-navy'
               : 'text-white/70 hover:text-white'
           }`}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -86,7 +97,7 @@ export default function Nav() {
         <div
           className={`md:hidden border-t ${
             scrolled
-              ? 'bg-white border-brand-text-blue/[0.08]'
+              ? 'bg-white border-brand-dark-navy/[0.08]'
               : 'bg-brand-dark-bg/95 backdrop-blur-xl border-white/[0.06]'
           }`}
         >
@@ -97,7 +108,7 @@ export default function Nav() {
                 href={link.href}
                 className={`font-body text-base py-3 px-2 rounded-lg transition-all ${
                   scrolled
-                    ? 'text-brand-text-blue/60 hover:text-brand-text-blue hover:bg-brand-text-blue/5'
+                    ? 'text-brand-dark-navy/60 hover:text-brand-dark-navy hover:bg-brand-dark-navy/5'
                     : 'text-white/60 hover:text-white hover:bg-white/5'
                 }`}
                 onClick={() => setMobileOpen(false)}

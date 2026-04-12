@@ -10,17 +10,25 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          'mountain-blue': '#1c3f5a',
-          'text-blue': '#183550',
-          'dark-bg': '#1a2332',
-          'dark-bg-light': '#1e2a3b',
-          'flame': '#ed6d33',
-          'flame-hover': '#ec7d2e',
+          // Core palette (v3.1 brand guidelines)
+          'dark-navy': '#1b2e3f',
+          'slate-blue': '#2d556e',
+          'flame': '#e87928',
+          'burnt-sienna': '#a5391a',
+          // Neutrals
+          'off-white': '#f4f5f7',
+          'light-gray': '#e8eaed',
+          'mid-gray': '#8b95a1',
+          // Backgrounds
+          'dark-bg': '#131f2a',
+          'dark-bg-light': '#1b2e3f',
+          // Hover state — slightly desaturated flame
+          'flame-hover': '#d36a1f',
         },
       },
       fontFamily: {
         brand: ['var(--font-josefin)', 'sans-serif'],
-        body: ['var(--font-dm-sans)', 'sans-serif'],
+        body: ['var(--font-outfit)', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',

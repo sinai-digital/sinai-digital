@@ -34,10 +34,10 @@ export default function PortfolioSection() {
                   <span className="brand-heading text-brand-flame/60 text-xs mb-3 block">
                     Project {String(i + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-brand-text-blue mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-dark-navy mb-4">
                     {project.name}
                   </h3>
-                  <p className="text-brand-text-blue/50 mb-8 leading-relaxed">
+                  <p className="text-brand-dark-navy/50 mb-8 leading-relaxed">
                     {project.description}
                   </p>
                   <a

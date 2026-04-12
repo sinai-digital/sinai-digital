@@ -10,14 +10,18 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Sinai Digital. All rights reserved.
           </p>
 
-          {/* Center: logo — use flex-1 on siblings for true centering */}
-          <div className="flex-shrink-0">
+          {/* Center: vertical lockup composed in code */}
+          <div className="flex-shrink-0 flex flex-col items-center gap-3">
             <Image
-              src="/images/sinai-digital-lockup-vertical-inverse-512.png"
+              src="/images/sinai-digital-icon-inverse.svg"
               alt="Sinai Digital"
-              width={120}
-              height={120}
+              width={56}
+              height={46}
+              className="opacity-80"
             />
+            <span className="brand-heading text-white/60 text-[11px] !tracking-[0.32em]">
+              Sinai Digital
+            </span>
           </div>
 
           {/* Right: email */}

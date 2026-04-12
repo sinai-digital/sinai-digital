@@ -29,7 +29,7 @@ export default function HowItWorksSection() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(28,63,90,1) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(45,85,110,1) 0%, transparent 70%)',
         }}
       />
 
@@ -55,10 +55,10 @@ export default function HowItWorksSection() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-brand-text-blue mb-3">
+                <h3 className="text-xl font-bold text-brand-dark-navy mb-3">
                   {step.title}
                 </h3>
-                <p className="text-brand-text-blue/50 leading-relaxed max-w-xs mx-auto">
+                <p className="text-brand-dark-navy/50 leading-relaxed max-w-xs mx-auto">
                   {step.description}
                 </p>
               </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Josefin_Sans, DM_Sans } from 'next/font/google'
+import { Josefin_Sans, Outfit } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -11,10 +11,10 @@ const josefin = Josefin_Sans({
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-dm-sans',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-outfit',
   display: 'swap',
 })
 
@@ -79,10 +79,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${josefin.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${josefin.variable} ${outfit.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="min-h-screen">

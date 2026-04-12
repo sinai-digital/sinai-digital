@@ -6,24 +6,24 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center bg-brand-dark-bg overflow-hidden noise-overlay"
     >
-      {/* Aurora gradient orbs */}
+      {/* Aurora gradient orbs (slate-blue + flame from v2 palette) */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute -top-1/4 -left-1/4 w-[80vw] h-[80vw] rounded-full animate-aurora opacity-30"
           style={{
-            background: 'radial-gradient(circle, rgba(28,63,90,0.8) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(45,85,110,0.8) 0%, transparent 70%)',
           }}
         />
         <div
           className="absolute -bottom-1/4 -right-1/4 w-[60vw] h-[60vw] rounded-full animate-aurora-2 opacity-20"
           style={{
-            background: 'radial-gradient(circle, rgba(237,109,51,0.6) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(232,121,40,0.6) 0%, transparent 70%)',
           }}
         />
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] rounded-full animate-aurora-3 opacity-20"
           style={{
-            background: 'radial-gradient(circle, rgba(28,63,90,0.6) 0%, transparent 60%)',
+            background: 'radial-gradient(circle, rgba(45,85,110,0.6) 0%, transparent 60%)',
           }}
         />
       </div>
@@ -40,19 +40,22 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-5 max-w-4xl mx-auto">
-        {/* Logo mark */}
+        {/* Vertical lockup: icon mark above wordmark, composed in code (v2 brand) */}
         <div
-          className="mb-8 flex justify-center animate-fade-in"
+          className="mb-10 flex flex-col items-center animate-fade-in"
           style={{ animationDelay: '0ms' }}
         >
           <Image
-            src="/images/sinai-digital-lockup-vertical-inverse-512.png"
+            src="/images/sinai-digital-icon-inverse.svg"
             alt="Sinai Digital"
-            width={280}
-            height={280}
+            width={180}
+            height={148}
             priority
-            className="drop-shadow-[0_0_40px_rgba(237,109,51,0.15)]"
+            className="drop-shadow-[0_0_40px_rgba(232,121,40,0.18)] mb-6"
           />
+          <span className="brand-heading text-white text-base md:text-lg !tracking-[0.4em]">
+            Sinai Digital
+          </span>
         </div>
 
         {/* Headline */}
