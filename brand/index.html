@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinai Digital — Brand Guidelines v3.1 — Logo v2 Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-navy: #1b2e3f;
+    --slate-blue: #2d556e;
+    --burnt-sienna: #a5391a;
+    --flame-orange: #e87928;
+    --white: #ffffff;
+    --off-white: #f4f5f7;
+    --light-gray: #e8eaed;
+    --mid-gray: #8b95a1;
+    --dark-bg: #131f2a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-navy);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── Cover ─── */
+  .cover {
+    background: var(--dark-bg);
+    padding: 80px 60px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    min-height: 100vh;
+    position: relative; overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; top: -30%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,121,40,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cover-lockup {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 2px;
+    margin-bottom: 64px;
+  }
+  .cover-lockup img { width: 120px; height: auto; filter: drop-shadow(0 4px 24px rgba(232,121,40,0.15)); }
+  .cover-lockup .cl-sinai {
+    font-family: 'Josefin Sans'; font-weight: 600;
+    font-size: 32px; letter-spacing: 8px; text-transform: uppercase;
+    color: var(--white);
+  }
+  .cover-lockup .cl-digital {
+    font-family: 'Josefin Sans'; font-weight: 600;
+    font-size: 18px; letter-spacing: 12px; text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+  .cover-rule { width: 60px; height: 2px; background: var(--flame-orange); margin-bottom: 32px; }
+  .cover-sub { font-weight: 300; font-size: 16px; letter-spacing: 4px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 8px; }
+  .cover-version { font-size: 13px; color: var(--mid-gray); letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ─── Sections ─── */
+  .section { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+  .section-dark { background: var(--dark-bg); max-width: none; padding: 80px 60px; }
+  .section-dark .si { max-width: 1200px; margin: 0 auto; }
+  .section-alt { background: var(--off-white); max-width: none; padding: 80px 60px; }
+  .section-alt .si { max-width: 1200px; margin: 0 auto; }
+  .sl { font-family: 'Josefin Sans'; font-weight: 600; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--flame-orange); margin-bottom: 12px; }
+  .sh { font-family: 'Josefin Sans'; font-weight: 600; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 16px; }
+  .section-dark .sh { color: var(--white); }
+  .sd { font-size: 15px; color: var(--slate-blue); max-width: 640px; margin-bottom: 48px; line-height: 1.7; }
+  .section-dark .sd { color: var(--mid-gray); }
+  .sub-h { font-family: 'Josefin Sans'; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 20px; }
+  .section-dark .sub-h { color: var(--white); }
+
+  /* ─── Logo Cards ─── */
+  .logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 48px; }
+  .lc { border-radius: 12px; padding: 60px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px; position: relative; }
+  .lc-light { background: var(--white); border: 1px solid var(--light-gray); }
+  .lc-dark { background: var(--dark-navy); }
+  .lc-alt { background: var(--off-white); border: 1px solid var(--light-gray); }
+  .lc-accent { background: var(--flame-orange); }
+  .lc img { max-width: 160px; height: auto; }
+  .lc-label { position: absolute; bottom: 16px; left: 20px; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
+  .lc-light .lc-label, .lc-alt .lc-label { color: var(--dark-navy); }
+  .lc-dark .lc-label, .lc-accent .lc-label { color: white; }
+
+  /* ─── Hamburger (Primary Lockup) ─── */
+  .hamburger { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .hamburger img { width: 80px; height: auto; }
+  .hamburger .txt { text-align: center; line-height: 1.1; }
+  .hamburger .h-sinai { font-family: 'Josefin Sans'; font-weight: 600; font-size: 20px; letter-spacing: 6px; text-transform: uppercase; }
+  .hamburger .h-digital { font-family: 'Josefin Sans'; font-weight: 600; font-size: 14px; letter-spacing: 7px; text-transform: uppercase; color: var(--mid-gray); }
+
+  /* ─── Hotdog (Utility Lockup) ─── */
+  .hotdog { display: flex; align-items: center; gap: 14px; }
+  .hotdog img { width: 52px; height: auto; }
+  .hotdog span { font-family: 'Josefin Sans'; font-weight: 600; font-size: 26px; letter-spacing: 5px; text-transform: uppercase; margin-top: 8px; }
+
+  /* ─── Palette ─── */
+  .palette-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 40px; }
+  .cc { border-radius: 12px; overflow: hidden; border: 1px solid var(--light-gray); }
+  .cc-swatch { height: 120px; }
+  .cc-info { padding: 16px; background: white; }
+  .cc-name { font-family: 'Josefin Sans'; font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; color: var(--dark-navy); }
+  .cc-role { font-size: 11px; color: var(--flame-orange); margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+  .cc-vals { font-size: 12px; color: var(--mid-gray); line-height: 1.8; }
+  .palette-ext { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .ce { border-radius: 8px; overflow: hidden; border: 1px solid var(--light-gray); }
+  .ce-swatch { height: 60px; }
+  .ce-info { padding: 10px 12px; background: white; }
+  .ce-name { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 4px; }
+  .ce-hex { font-size: 11px; color: var(--mid-gray); }
+
+  /* ─── Type ─── */
+  .type-weights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
+  .tw { padding: 20px; border: 1px solid var(--light-gray); border-radius: 8px; }
+  .tw-name { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 8px; }
+
+  /* ─── Guidelines ─── */
+  .gg { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .gc { border: 1px solid var(--light-gray); border-radius: 12px; padding: 32px; }
+  .gc.do { border-left: 3px solid #2a9d5c; }
+  .gc.dont { border-left: 3px solid #d94040; }
+  .gc-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 16px; }
+  .gc-badge.do { background: #e8f5ec; color: #2a9d5c; }
+  .gc-badge.dont { background: #fde8e8; color: #d94040; }
+  .gc-list { list-style: none; padding: 0; }
+  .gc-list li { font-size: 14px; line-height: 1.7; color: var(--slate-blue); padding: 4px 0 4px 20px; position: relative; }
+  .gc-list li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--mid-gray); }
+
+  .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .footer { background: var(--dark-bg); padding: 48px 60px; text-align: center; }
+  .footer p { font-size: 13px; color: var(--mid-gray); letter-spacing: 2px; }
+
+  @media print { .section, .section-dark, .section-alt { page-break-inside: avoid; } .cover { min-height: auto; padding: 80px 40px; } }
+</style>
+</head>
+<body>
+
+<!-- ━━━ COVER ━━━ -->
+<section class="cover">
+  <div class="cover-lockup">
+    <img id="cover-logo" alt="">
+    <div style="text-align: center; line-height: 1.1;">
+      <div class="cl-sinai">Sinai</div>
+      <div class="cl-digital">Digital</div>
+    </div>
+  </div>
+  <div class="cover-rule"></div>
+  <p class="cover-sub">Brand Guidelines</p>
+  <p class="cover-version">Version 3.1 — Logo v2 Asset Review — March 2026</p>
+</section>
+
+<!-- ━━━ 01 — LOGO ━━━ -->
+<section class="section">
+  <p class="sl">01 — Logo</p>
+  <h2 class="sh">Primary Mark</h2>
+  <p class="sd">The Sinai Digital logo combines a mountain peak with a flame — representing Mount Sinai and the burning bush. This refined mark features clean, geometric forms with bold angular silhouettes. The mountain is rendered as a solid, confident shape in deep navy, while the flame rises above in warm orange and burnt sienna tones with smooth, organic curves.</p>
+  <div class="logo-grid">
+    <div class="lc lc-light"><img id="logo-light" alt=""><span class="lc-label">Light background</span></div>
+    <div class="lc lc-dark"><img id="logo-dark" alt=""><span class="lc-label">Dark background</span></div>
+    <div class="lc lc-alt"><img id="logo-alt" alt=""><span class="lc-label">Alt background</span></div>
+    <div class="lc lc-accent"><img id="logo-accent" alt=""><span class="lc-label">Accent (mono)</span></div>
+  </div>
+</section>
+
+<!-- ━━━ 02 — LOCKUPS ━━━ -->
+<section class="section-alt">
+  <div class="si">
+    <p class="sl">02 — Lockups</p>
+    <h2 class="sh">Brand Lockups</h2>
+    <p class="sd">Two official lockups serve different contexts. The stacked lockup is the primary brand mark — the icon and text stack form a unified vertical composition. The horizontal lockup is the utility mark for headers, signatures, and navigation.</p>
+
+    <h3 class="sub-h">Primary Lockup — Stacked</h3>
+    <div class="logo-grid">
+      <div class="lc lc-light" style="min-height: 320px;">
+        <div class="hamburger">
+          <img class="logo-normal" alt="">
+          <div class="txt">
+            <div class="h-sinai" style="color: var(--dark-navy);">Sinai</div>
+            <div class="h-digital">Digital</div>
+          </div>
+        </div>
+        <span class="lc-label">Light</span>
+      </div>
+      <div class="lc lc-dark" style="min-height: 320px;">
+        <div class="hamburger">
+          <img class="logo-inverse" alt="">
+          <div class="txt">
+            <div class="h-sinai" style="color: white;">Sinai</div>
+            <div class="h-digital">Digital</div>
+          </div>
+        </div>
+        <span class="lc-label">Dark</span>
+      </div>
+    </div>
+
+    <h3 class="sub-h">Utility Lockup — Horizontal</h3>
+    <div style="background: white; border: 1px solid var(--light-gray); border-radius: 12px; padding: 48px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+      <div class="hotdog">
+        <img class="logo-normal" style="width: 52px;" alt="">
+        <span style="color: var(--dark-navy);">Sinai Digital</span>
+      </div>
+    </div>
+    <div style="background: var(--dark-navy); border-radius: 12px; padding: 48px; display: flex; align-items: center; justify-content: center;">
+      <div class="hotdog">
+        <img class="logo-inverse" style="width: 52px;" alt="">
+        <span style="color: white;">Sinai Digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 03 — CLEAR SPACE ━━━ -->
+<section class="section">
+  <p class="sl">03 — Clear Space & Sizing</p>
+  <h2 class="sh">Minimum Clear Space</h2>
+  <p class="sd">Maintain a minimum clear space equal to the height of the flame tip around the logo at all times. Never crowd the mark with adjacent elements.</p>
+  <div style="display: flex; align-items: center; justify-content: center; padding: 40px; margin-bottom: 40px;">
+    <div style="position: relative; display: inline-block; padding: 40px; border: 2px dashed var(--flame-orange); border-radius: 8px;">
+      <span style="position: absolute; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--flame-orange); font-weight: 600; top: 10px; left: 50%; transform: translateX(-50%);">1× flame</span>
+      <span style="position: absolute; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--flame-orange); font-weight: 600; right: 6px; top: 50%; transform: translateY(-50%) rotate(90deg);">1× flame</span>
+      <span style="position: absolute; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--flame-orange); font-weight: 600; bottom: 10px; left: 50%; transform: translateX(-50%);">1× flame</span>
+      <span style="position: absolute; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--flame-orange); font-weight: 600; left: 6px; top: 50%; transform: translateY(-50%) rotate(-90deg);">1× flame</span>
+      <img class="logo-normal" style="width: 100px; display: block;" alt="">
+    </div>
+  </div>
+  <h3 class="sub-h">Minimum Sizes</h3>
+  <div style="display: flex; align-items: flex-end; gap: 48px; padding: 32px; background: var(--off-white); border-radius: 12px;">
+    <div style="text-align: center;"><img class="logo-normal" style="width: 64px; display: block; margin: 0 auto 8px;" alt=""><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px;">64px — Digital</span></div>
+    <div style="text-align: center;"><img class="logo-normal" style="width: 40px; display: block; margin: 0 auto 8px;" alt=""><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px;">40px — Avatar</span></div>
+    <div style="text-align: center;"><img class="logo-normal" style="width: 24px; display: block; margin: 0 auto 8px;" alt=""><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px;">24px — Favicon</span></div>
+    <div style="text-align: center;"><img class="logo-normal" style="width: 16px; display: block; margin: 0 auto 8px;" alt=""><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px;">16px — Min</span></div>
+  </div>
+</section>
+
+<!-- ━━━ 04 — COLOR PALETTE ━━━ -->
+<section class="section-dark">
+  <div class="si">
+    <p class="sl">04 — Color Palette</p>
+    <h2 class="sh">Brand Colors</h2>
+    <p class="sd">The logo uses three colors — dark navy, flame orange, and burnt sienna. Slate blue extends the palette for UI, secondary text, and interactive states. Each color has a defined role in the system.</p>
+    <div class="palette-grid">
+      <div class="cc">
+        <div class="cc-swatch" style="background: #1b2e3f;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Dark Navy</div>
+          <div class="cc-role">Primary · Headings · Backgrounds</div>
+          <div class="cc-vals">HEX #1B2E3F<br>RGB 27, 46, 63<br>HSL 208°, 40%, 18%</div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-swatch" style="background: #2d556e;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Slate Blue</div>
+          <div class="cc-role">Secondary · Body Text · Hover States</div>
+          <div class="cc-vals">HEX #2D556E<br>RGB 45, 85, 110<br>HSL 203°, 42%, 30%</div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-swatch" style="background: #a5391a;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Burnt Sienna</div>
+          <div class="cc-role">Accent Depth · Active States · Borders</div>
+          <div class="cc-vals">HEX #A5391A<br>RGB 165, 57, 26<br>HSL 13°, 73%, 37%</div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-swatch" style="background: #e87928;"></div>
+        <div class="cc-info">
+          <div class="cc-name">Flame Orange</div>
+          <div class="cc-role">Accent · CTAs · Links · Highlights</div>
+          <div class="cc-vals">HEX #E87928<br>RGB 232, 121, 40<br>HSL 25°, 82%, 53%</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'Josefin Sans'; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px; margin-top: 48px;">Extended Neutrals</h3>
+    <div class="palette-ext">
+      <div class="ce"><div class="ce-swatch" style="background: #131f2a;"></div><div class="ce-info"><div class="ce-name">Deep Night</div><div class="ce-hex">#131F2A</div></div></div>
+      <div class="ce"><div class="ce-swatch" style="background: #1b2e3f;"></div><div class="ce-info"><div class="ce-name">Dark Navy</div><div class="ce-hex">#1B2E3F</div></div></div>
+      <div class="ce"><div class="ce-swatch" style="background: #8b95a1;"></div><div class="ce-info"><div class="ce-name">Stone Gray</div><div class="ce-hex">#8B95A1</div></div></div>
+      <div class="ce"><div class="ce-swatch" style="background: #e8eaed;"></div><div class="ce-info"><div class="ce-name">Light Gray</div><div class="ce-hex">#E8EAED</div></div></div>
+      <div class="ce"><div class="ce-swatch" style="background: #f4f5f7;"></div><div class="ce-info"><div class="ce-name">Off-White</div><div class="ce-hex">#F4F5F7</div></div></div>
+    </div>
+
+    <div style="margin-top: 48px;">
+      <h3 style="font-family: 'Josefin Sans'; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px;">Usage Ratios</h3>
+      <div style="display: flex; height: 48px; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
+        <div style="flex: 5; background: var(--dark-navy);"></div>
+        <div style="flex: 3; background: var(--slate-blue);"></div>
+        <div style="flex: 1.5; background: var(--flame-orange);"></div>
+        <div style="flex: 0.5; background: var(--burnt-sienna);"></div>
+      </div>
+      <div style="display: flex; font-size: 11px; color: var(--mid-gray); letter-spacing: 1px;">
+        <span style="flex: 5;">DARK NAVY — 50%</span>
+        <span style="flex: 3;">SLATE BLUE — 30%</span>
+        <span style="flex: 1.5;">FLAME — 15%</span>
+        <span style="flex: 0.5;">BURNT — 5%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 05 — TYPOGRAPHY ━━━ -->
+<section class="section">
+  <p class="sl">05 — Typography</p>
+  <h2 class="sh">Type System</h2>
+  <p class="sd">Two complementary typefaces form the brand's voice: Josefin Sans for headings and display text, Outfit for body copy. Both are geometric in construction — Josefin Sans brings angular authority while Outfit provides warmth and excellent legibility.</p>
+
+  <div style="margin-bottom: 48px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--flame-orange); margin-bottom: 16px;">Display — Josefin Sans</div>
+    <div style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 48px; letter-spacing: 6px; text-transform: uppercase; color: var(--dark-navy); line-height: 1.2; margin-bottom: 8px;">ABCDEFGHIJKLM</div>
+    <div style="font-family: 'Josefin Sans'; font-weight: 300; font-size: 48px; letter-spacing: 6px; text-transform: uppercase; color: var(--slate-blue); line-height: 1.2; margin-bottom: 24px;">NOPQRSTUVWXYZ</div>
+    <div class="type-weights">
+      <div class="tw"><div class="tw-name">Light 300</div><div style="font-family: 'Josefin Sans'; font-weight: 300; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: var(--dark-navy);">Sinai Digital</div></div>
+      <div class="tw"><div class="tw-name">SemiBold 600 ★</div><div style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: var(--dark-navy);">Sinai Digital</div></div>
+      <div class="tw"><div class="tw-name">Bold 700</div><div style="font-family: 'Josefin Sans'; font-weight: 700; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: var(--dark-navy);">Sinai Digital</div></div>
+    </div>
+    <p style="font-size: 12px; color: var(--mid-gray); margin-top: 8px;">★ Primary weight for wordmark and headings. Always uppercase with 4–6px letter-spacing.</p>
+  </div>
+
+  <div style="margin-bottom: 48px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--flame-orange); margin-bottom: 16px;">Body — Outfit</div>
+    <div style="font-family: 'Outfit'; font-weight: 300; font-size: 16px; line-height: 1.7; color: var(--slate-blue); margin-bottom: 12px;">Outfit Light provides a clean, approachable reading experience for longer passages. Its geometric structure complements Josefin Sans while offering warmth through rounder terminals and friendlier counters.</div>
+    <div style="font-family: 'Outfit'; font-size: 16px; line-height: 1.7; color: var(--dark-navy);">Outfit Regular is the primary weight for body copy, descriptions, and UI elements. We build modern, high-performance web applications that elevate small businesses. Every pixel serves a purpose, every interaction tells your story. Set at 16px with 1.6–1.7 line-height for optimal readability.</div>
+  </div>
+
+  <div>
+    <h3 class="sub-h">Type Scale</h3>
+    <div style="border-left: 2px solid var(--light-gray); padding-left: 24px;">
+      <div style="margin-bottom: 20px;"><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">H1 — 42px / Josefin Sans 600</span><span style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 42px; letter-spacing: 5px; text-transform: uppercase; color: var(--dark-navy);">Page Title</span></div>
+      <div style="margin-bottom: 20px;"><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">H2 — 28px / Josefin Sans 600</span><span style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; color: var(--dark-navy);">Section Heading</span></div>
+      <div style="margin-bottom: 20px;"><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">H3 — 18px / Josefin Sans 600</span><span style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 18px; letter-spacing: 3px; text-transform: uppercase; color: var(--dark-navy);">Subsection</span></div>
+      <div style="margin-bottom: 20px;"><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">LABEL — 11px / Josefin Sans 600</span><span style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--flame-orange);">Section Label</span></div>
+      <div style="margin-bottom: 20px;"><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">Body — 16px / Outfit 400</span><span style="font-family: 'Outfit'; font-size: 16px; line-height: 1.7; color: var(--dark-navy);">Body copy set at sixteen pixels with comfortable line-height.</span></div>
+      <div><span style="font-size: 11px; color: var(--mid-gray); letter-spacing: 1px; display: block; margin-bottom: 4px;">Small — 13px / Outfit 400</span><span style="font-family: 'Outfit'; font-size: 13px; color: var(--mid-gray);">Captions, metadata, and supporting text.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 06 — GUIDELINES ━━━ -->
+<section class="section-alt">
+  <div class="si">
+    <p class="sl">06 — Usage Guidelines</p>
+    <h2 class="sh">Do's & Don'ts</h2>
+    <p class="sd">Consistent application protects the brand. Follow these guidelines to maintain the integrity of the Sinai Digital identity across all touchpoints.</p>
+    <div class="gg">
+      <div class="gc do">
+        <span class="gc-badge do">Do</span>
+        <ul class="gc-list">
+          <li>Use the logo on solid white, dark navy, or off-white backgrounds</li>
+          <li>Maintain proportional scaling — never stretch or compress</li>
+          <li>Keep the minimum clear space around the mark</li>
+          <li>Use the monochrome (white) version on the accent orange background</li>
+          <li>Use the stacked lockup for display; horizontal for headers and nav</li>
+        </ul>
+      </div>
+      <div class="gc dont">
+        <span class="gc-badge dont">Don't</span>
+        <ul class="gc-list">
+          <li>Place the logo on busy photographic or patterned backgrounds</li>
+          <li>Rotate, skew, or apply effects (drop shadows, glows, outlines)</li>
+          <li>Alter the logo colors or use unapproved combinations</li>
+          <li>Add strokes, borders, or containment shapes around the mark</li>
+          <li>Reproduce below 16px width in digital contexts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 07 — APPLICATION ━━━ -->
+<section class="section-dark">
+  <div class="si">
+    <p class="sl">07 — Application</p>
+    <h2 class="sh">Brand in Context</h2>
+    <p class="sd">The brand identity applied across digital and physical touchpoints.</p>
+
+    <!-- Business cards -->
+    <h3 class="sub-h">Business Cards</h3>
+    <div class="app-grid" style="margin-bottom: 40px;">
+      <div style="background: var(--dark-navy); border-radius: 12px; padding: 36px; aspect-ratio: 1.6; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="hotdog" style="gap: 10px;">
+          <img class="logo-inverse" style="width: 28px;" alt="">
+          <span style="font-size: 13px; letter-spacing: 4px; color: white; margin-top: 6px;">Sinai Digital</span>
+        </div>
+        <div>
+          <div style="font-family: 'Outfit'; font-size: 14px; color: white; margin-bottom: 4px;">Matt</div>
+          <div style="font-family: 'Outfit'; font-size: 12px; color: var(--mid-gray);">Founder & Developer</div>
+          <div style="font-family: 'Outfit'; font-size: 12px; color: var(--flame-orange); margin-top: 8px;">sinaidigital.dev</div>
+        </div>
+      </div>
+      <div style="background: white; border-radius: 12px; padding: 36px; aspect-ratio: 1.6; display: flex; align-items: center; justify-content: center; border: 1px solid var(--light-gray);">
+        <div class="hamburger">
+          <img class="logo-normal" style="width: 60px;" alt="">
+          <div class="txt">
+            <div class="h-sinai" style="color: var(--dark-navy); font-size: 16px;">Sinai</div>
+            <div class="h-digital" style="font-size: 11px; letter-spacing: 5.5px;">Digital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Website headers -->
+    <h3 class="sub-h">Website Header</h3>
+    <div style="background: white; border-radius: 12px; overflow: hidden; margin-bottom: 24px; border: 1px solid var(--light-gray);">
+      <div style="padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--light-gray);">
+        <div class="hotdog" style="gap: 10px;">
+          <img class="logo-normal" style="width: 32px;" alt="">
+          <span style="font-size: 14px; letter-spacing: 3px; color: var(--dark-navy); margin-top: 5px;">Sinai Digital</span>
+        </div>
+        <div style="display: flex; gap: 32px; font-family: 'Outfit'; font-size: 13px; color: var(--slate-blue); letter-spacing: 1px; align-items: center;">
+          <span>Services</span><span>Work</span><span>Pricing</span>
+          <span style="background: var(--flame-orange); color: white; padding: 6px 16px; border-radius: 6px; font-weight: 500;">Contact</span>
+        </div>
+      </div>
+      <div style="padding: 40px 32px; text-align: center; background: var(--off-white);">
+        <div style="font-family: 'Outfit'; font-size: 12px; color: var(--mid-gray);">Light header — horizontal lockup in navigation</div>
+      </div>
+    </div>
+    <div style="background: var(--dark-bg); border-radius: 12px; overflow: hidden; margin-bottom: 40px;">
+      <div style="padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06);">
+        <div class="hotdog" style="gap: 10px;">
+          <img class="logo-inverse" style="width: 32px;" alt="">
+          <span style="font-size: 14px; letter-spacing: 3px; color: white; margin-top: 5px;">Sinai Digital</span>
+        </div>
+        <div style="display: flex; gap: 32px; font-family: 'Outfit'; font-size: 13px; color: var(--mid-gray); letter-spacing: 1px; align-items: center;">
+          <span>Services</span><span>Work</span><span>Pricing</span>
+          <span style="background: var(--flame-orange); color: white; padding: 6px 16px; border-radius: 6px; font-weight: 500;">Contact</span>
+        </div>
+      </div>
+      <div style="padding: 40px 32px; text-align: center;">
+        <div style="font-family: 'Outfit'; font-size: 12px; color: rgba(255,255,255,0.3);">Dark header — inverse lockup</div>
+      </div>
+    </div>
+
+    <!-- Social & Email -->
+    <h3 class="sub-h">Social & Email</h3>
+    <div class="app-grid" style="margin-bottom: 24px;">
+      <div style="background: var(--off-white); border-radius: 12px; padding: 28px; display: flex; align-items: center; gap: 20px; border: 1px solid var(--light-gray);">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; border: 1px solid var(--light-gray); flex-shrink: 0;">
+          <img class="logo-normal" style="width: 36px;" alt="">
+        </div>
+        <div>
+          <div style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">Sinai Digital</div>
+          <div style="font-family: 'Outfit'; font-size: 12px; color: var(--mid-gray);">Social profile — icon as avatar</div>
+        </div>
+      </div>
+      <div style="background: var(--dark-navy); border-radius: 12px; padding: 28px; display: flex; align-items: center; gap: 20px;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--dark-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <img class="logo-inverse" style="width: 36px;" alt="">
+        </div>
+        <div>
+          <div style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: white; margin-bottom: 2px;">Sinai Digital</div>
+          <div style="font-family: 'Outfit'; font-size: 12px; color: var(--mid-gray);">Dark variant</div>
+        </div>
+      </div>
+    </div>
+    <div style="background: white; border-radius: 12px; padding: 32px; border: 1px solid var(--light-gray);">
+      <div style="font-family: 'Outfit'; font-size: 13px; color: #999; margin-bottom: 16px;">Email Signature</div>
+      <div style="border-top: 2px solid var(--flame-orange); padding-top: 16px; display: flex; align-items: flex-start; gap: 16px;">
+        <img class="logo-normal" style="width: 40px; margin-top: 2px;" alt="">
+        <div>
+          <div style="font-family: 'Josefin Sans'; font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--dark-navy);">Matt</div>
+          <div style="font-family: 'Outfit'; font-size: 13px; color: var(--slate-blue); margin-bottom: 4px;">Founder & Developer — Sinai Digital LLC</div>
+          <div style="font-family: 'Outfit'; font-size: 12px; color: var(--mid-gray);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f171a1313103f0c16111e161b1618160b1e13511b1a09">[email&#160;protected]</a> · sinaidigital.dev</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 08 — ASSET GALLERY ━━━ -->
+<section class="section">
+  <p class="sl">08 — Designer Assets</p>
+  <h2 class="sh">Logo Asset Gallery (v2)</h2>
+  <p class="sd">All logo assets from the designer's v2 delivery. The new design features a three-color flame (orange + burnt sienna depth layer) over the angular mountain silhouette. Clean SVGs were generated from the Inkscape source. PNGs generated from the clean SVGs at 256, 512, and 1024px.</p>
+
+  <h3 class="sub-h">Clean SVG Variants (generated from source)</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: white; min-height: 200px;">
+        <img src="logo-assets-v2/primary.svg" style="width: 160px; height: auto;" alt="Primary SVG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">Primary</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">primary.svg</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: var(--dark-navy); min-height: 200px;">
+        <img src="logo-assets-v2/inverse.svg" style="width: 160px; height: auto;" alt="Inverse SVG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">Inverse (white mountain)</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">inverse.svg</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: var(--flame-orange); min-height: 200px;">
+        <img src="logo-assets-v2/mono-white.svg" style="width: 160px; height: auto;" alt="Mono White SVG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">Mono White</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">mono-white.svg</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Designer's Original Deliverables</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: white; min-height: 200px;">
+        <img src="logo-assets-v2/primary-original.jpg" style="width: 120px; height: auto;" alt="Flame JPEG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">Primary (JPEG)</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">primary-original.jpg</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">794 x 1123 &middot; Progressive JPEG</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: var(--dark-navy); min-height: 200px;">
+        <img src="logo-assets-v2/white-original.png" style="width: 120px; height: auto;" alt="White PNG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">White (PNG)</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">white-original.png</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">727 x 590 &middot; 8-bit RGBA</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 40px; display: flex; align-items: center; justify-content: center; background: var(--dark-navy); min-height: 200px;">
+        <img src="logo-assets-v2/white-original.jpg" style="width: 120px; height: auto;" alt="White JPEG">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-navy); margin-bottom: 2px;">White (JPEG)</div>
+        <div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">white-original.jpg</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">727 x 590 &middot; Progressive JPEG</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Generated PNGs (from clean SVG, transparent BG)</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 24px; display: flex; align-items: center; justify-content: center; background: #e8eaed; min-height: 180px;">
+        <img src="logo-assets-v2/primary-256.png" style="max-width: 120px; height: auto;" alt="Primary 256">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 11px; font-weight: 600; color: var(--dark-navy);">Primary 256px</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">Transparent BG &middot; From SVG</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 24px; display: flex; align-items: center; justify-content: center; background: #e8eaed; min-height: 180px;">
+        <img src="logo-assets-v2/primary-512.png" style="max-width: 120px; height: auto;" alt="Primary 512">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 11px; font-weight: 600; color: var(--dark-navy);">Primary 512px</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">Transparent BG &middot; From SVG</div>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--light-gray); border-radius: 12px; overflow: hidden;">
+      <div style="padding: 24px; display: flex; align-items: center; justify-content: center; background: #e8eaed; min-height: 180px;">
+        <img src="logo-assets-v2/primary-1024.png" style="max-width: 120px; height: auto;" alt="Primary 1024">
+      </div>
+      <div style="padding: 12px 16px; background: var(--off-white); border-top: 1px solid var(--light-gray);">
+        <div style="font-size: 11px; font-weight: 600; color: var(--dark-navy);">Primary 1024px</div>
+        <div style="font-size: 10px; color: var(--mid-gray);">Transparent BG &middot; From SVG</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Delivered File Inventory</h3>
+  <div style="background: var(--off-white); border-radius: 12px; padding: 32px; font-family: monospace; font-size: 13px; line-height: 2; color: var(--dark-navy);">
+    <div style="color: var(--mid-gray); margin-bottom: 8px;">/ logo-assets-v2 <span style="font-family: 'Outfit'; font-size: 11px;">(designer delivery)</span></div>
+    <div style="padding-left: 24px;">
+      <div><span style="color: var(--flame-orange);">├──</span> primary-original.svg <span style="color: var(--mid-gray); font-size: 11px;">&larr; Inkscape source, 3-path + hidden layers</span></div>
+      <div><span style="color: var(--flame-orange);">├──</span> primary-original.jpg <span style="color: var(--mid-gray); font-size: 11px;">&larr; 794x1123 JPEG</span></div>
+      <div><span style="color: var(--flame-orange);">├──</span> primary-original.pdf / primary-original-2.pdf</div>
+      <div><span style="color: var(--flame-orange);">├──</span> white-original.svg <span style="color: var(--burnt-sienna); font-size: 11px;">&larr; fill-opacity:0 (won't render in browser)</span></div>
+      <div><span style="color: var(--flame-orange);">├──</span> white-original.png <span style="color: var(--mid-gray); font-size: 11px;">&larr; 727x590, 8-bit RGBA</span></div>
+      <div><span style="color: var(--flame-orange);">├──</span> white-original.jpg <span style="color: var(--mid-gray); font-size: 11px;">&larr; 727x590 JPEG</span></div>
+      <div><span style="color: var(--flame-orange);">└──</span> white-original.pdf</div>
+    </div>
+    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--light-gray); color: var(--mid-gray); font-size: 11px; font-family: 'Outfit';">
+      <strong style="color: var(--dark-navy);">Generated from source:</strong> primary.svg (clean 3-path) &middot; inverse.svg (white mountain) &middot; mono-white.svg (all white) &middot; PNGs at 256/512/1024
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ 09 — NOTES ━━━ -->
+<section class="section-alt">
+  <div class="si">
+    <p class="sl">09 — Review Notes</p>
+    <h2 class="sh">Asset Quality Assessment</h2>
+    <p class="sd">Observations on the v2 logo assets for review and approval.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid #2a9d5c;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #2a9d5c; margin-bottom: 12px;">Strengths</div>
+        <ul style="list-style: none; padding: 0; font-size: 14px; color: var(--slate-blue); line-height: 1.8;">
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">+</span> Two-tone flame adds visual depth and sophistication over v1's single-color flame</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">+</span> Mountain silhouette is bold, angular, and reads well at all sizes</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">+</span> Inkscape SVG source preserves all vector data for future edits</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">+</span> Color palette (#192938, #D38044, #944730) creates a rich, earthy warmth</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">+</span> Multiple format delivery (SVG, JPEG, PNG, PDF)</li>
+        </ul>
+      </div>
+      <div style="background: white; border-radius: 12px; padding: 24px; border-left: 3px solid #d94040;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #d94040; margin-bottom: 12px;">Issues to Address</div>
+        <ul style="list-style: none; padding: 0; font-size: 14px; color: var(--slate-blue); line-height: 1.8;">
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">&bull;</span> White SVG (white-original.svg) uses fill-opacity:0 -- won't render in browsers</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">&bull;</span> White PNG/JPEG are low resolution (727x590) for production use</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">&bull;</span> SVG has A4 page-size viewBox (210x297mm) rather than tight crop to artwork</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">&bull;</span> No transparent PNG exports were provided (only lossy JPEG)</li>
+          <li style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0;">&bull;</span> Logo colors differ from v3.0 brand palette (see comparison below)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px; background: white; border-radius: 12px; padding: 24px; border: 1px solid var(--light-gray);">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--flame-orange); margin-bottom: 12px;">Logo Color Comparison</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div>
+          <div style="font-size: 12px; font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">New Logo (v2)</div>
+          <div style="display: flex; gap: 12px;">
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #192938; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#192938</div><div style="font-size: 10px; color: var(--mid-gray);">Mountain</div></div>
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #d38044; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#D38044</div><div style="font-size: 10px; color: var(--mid-gray);">Flame</div></div>
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #944730; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#944730</div><div style="font-size: 10px; color: var(--mid-gray);">Flame Depth</div></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Previous Palette (v3.0)</div>
+          <div style="display: flex; gap: 12px;">
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #1b2e3f; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#1B2E3F</div><div style="font-size: 10px; color: var(--mid-gray);">Dark Navy</div></div>
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #e87928; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#E87928</div><div style="font-size: 10px; color: var(--mid-gray);">Flame Orange</div></div>
+            <div style="text-align: center;"><div style="width: 64px; height: 64px; border-radius: 8px; background: #a5391a; margin-bottom: 4px;"></div><div style="font-size: 11px; color: var(--mid-gray); font-family: monospace;">#A5391A</div><div style="font-size: 10px; color: var(--mid-gray);">Burnt Sienna</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 16px; font-size: 13px; color: var(--slate-blue); line-height: 1.7;">
+        The v2 logo introduces a three-color mark. The mountain (#192938) is very close to the brand navy. The flame now uses two tones: a warm orange (#D38044) and a rich burnt umber depth layer (#944730) that creates a realistic flame overlap effect. These sit close to the established Flame Orange and Burnt Sienna but are distinct values. Consider adopting them as the updated brand palette or requesting the designer match the existing hex values.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>SINAI DIGITAL LLC — BRAND GUIDELINES V3.1 — LOGO V2 REVIEW — MARCH 2026</p>
+</footer>
+
+
+<script>
+  const pri = 'logo-assets-v2/primary.svg';
+  const inv = 'logo-assets-v2/inverse.svg';
+  const mono = 'logo-assets-v2/mono-white.svg';
+  document.querySelectorAll('.logo-normal').forEach(el => el.src = pri);
+  document.querySelectorAll('.logo-inverse').forEach(el => el.src = inv);
+  document.getElementById('cover-logo').src = inv;
+  document.getElementById('logo-light').src = pri;
+  document.getElementById('logo-dark').src = inv;
+  document.getElementById('logo-alt').src = pri;
+  document.getElementById('logo-accent').src = mono;
+</script>
+</body>
+</html>
