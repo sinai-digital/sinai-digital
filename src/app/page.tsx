@@ -1,6 +1,6 @@
 import HeroSection from '@/components/HeroSection'
 import PortfolioSection from '@/components/PortfolioSection'
-import ServicesSection from '@/components/ServicesSection'
+import ApproachSection from '@/components/ApproachSection'
 import HowItWorksSection from '@/components/HowItWorksSection'
 import ContactSection from '@/components/ContactSection'
 
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <HeroSection />
       <PortfolioSection />
-      <ServicesSection />
+      <ApproachSection />
       <HowItWorksSection />
       <ContactSection />
     </>
