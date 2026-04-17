@@ -23,7 +23,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-white border-b border-brand-dark-navy/[0.08] shadow-[0_1px_8px_rgba(0,0,0,0.06)]'
           : 'bg-transparent border-b border-transparent'
