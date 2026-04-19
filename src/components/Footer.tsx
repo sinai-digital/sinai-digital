@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
 
           {/* Center: vertical lockup composed in code */}
-          <div className="flex-shrink-0 flex flex-col items-center gap-3">
+          <div className="flex-shrink-0 flex flex-col items-center gap-2">
             <Image
               src="/images/sinai-digital-icon-inverse.svg"
               alt="Sinai Digital"

@@ -51,9 +51,9 @@ export default function HeroSection() {
             width={180}
             height={148}
             priority
-            className="drop-shadow-[0_0_40px_rgba(232,121,40,0.18)] mb-6"
+            className="drop-shadow-[0_0_40px_rgba(232,121,40,0.18)] mb-4"
           />
-          <span className="brand-heading text-white text-base md:text-lg !tracking-[0.4em]">
+          <span className="brand-heading text-white text-lg md:text-xl !tracking-[0.4em]">
             Sinai Digital
           </span>
         </div>
