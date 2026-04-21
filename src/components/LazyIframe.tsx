@@ -14,11 +14,9 @@ export default function LazyIframe({ src, title }: LazyIframeProps) {
     triggerOnce: true,
   })
   const containerRef = useRef<HTMLDivElement>(null)
-  const [isMobile, setIsMobile] = useState(false)
   const [scale, setScale] = useState(0.5)
 
   const updateScale = useCallback(() => {
-    setIsMobile(window.innerWidth < 768)
     if (containerRef.current) {
       setScale(containerRef.current.offsetWidth / 1440)
     }
@@ -33,13 +31,7 @@ export default function LazyIframe({ src, title }: LazyIframeProps) {
   return (
     <div ref={ref} className="absolute inset-0">
       <div ref={containerRef} className="w-full h-full">
-        {isMobile ? (
-          <div className="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-            <p className="text-sm text-slate-400 font-body">
-              Visit site to preview
-            </p>
-          </div>
-        ) : isVisible ? (
+        {isVisible ? (
           <iframe
             src={src}
             title={title}
