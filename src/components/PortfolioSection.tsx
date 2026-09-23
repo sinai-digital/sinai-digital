@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { projects } from '@/lib/portfolio'
 import SectionHeader from './SectionHeader'
 import BrowserFrame from './BrowserFrame'
@@ -11,7 +12,7 @@ export default function PortfolioSection() {
         <SectionHeader
           label="Our Work"
           title="Websites That Deliver Results"
-          subtitle="Every project is custom-built from the ground up — designed to look great, load fast, and drive real business growth."
+          subtitle="From small-business websites to full web apps — every project is custom-built from the ground up to look great, load fast, and drive real results."
         />
 
         <div className="space-y-28 md:space-y-36">
@@ -32,7 +33,7 @@ export default function PortfolioSection() {
                   className="lg:w-5/12 text-center lg:text-left"
                 >
                   <span className="brand-heading text-brand-flame/60 text-xs mb-3 block">
-                    Project {String(i + 1).padStart(2, '0')}
+                    {project.kind}
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-dark-navy mb-4">
                     {project.name}
@@ -40,25 +41,32 @@ export default function PortfolioSection() {
                   <p className="text-brand-dark-navy/50 mb-8 leading-relaxed">
                     {project.description}
                   </p>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-brand-flame hover:text-brand-flame-hover font-semibold transition-all duration-300 group"
-                  >
-                    Visit Site
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  <div className="flex items-center justify-center lg:justify-start gap-4">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-brand-flame hover:text-brand-flame-hover font-semibold transition-all duration-300 group"
                     >
-                      <path d="M3 13L13 3M13 3H5M13 3v8" />
-                    </svg>
-                  </a>
+                      Visit Site
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      >
+                        <path d="M3 13L13 3M13 3H5M13 3v8" />
+                      </svg>
+                    </a>
+                    {project.note && (
+                      <span className="text-xs font-medium uppercase tracking-wider text-brand-dark-navy/40 border border-brand-dark-navy/10 rounded-full px-3 py-1">
+                        {project.note}
+                      </span>
+                    )}
+                  </div>
                 </ScrollReveal>
 
                 {/* Browser Frame */}
@@ -68,7 +76,17 @@ export default function PortfolioSection() {
                   className="lg:w-7/12 w-full"
                 >
                   <BrowserFrame url={project.displayUrl}>
-                    <LazyIframe src={project.url} title={project.name} />
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={`${project.name} preview`}
+                        fill
+                        sizes="(min-width: 1024px) 700px, 100vw"
+                        className="object-cover object-top"
+                      />
+                    ) : (
+                      <LazyIframe src={project.url} title={project.name} />
+                    )}
                   </BrowserFrame>
                 </ScrollReveal>
               </div>

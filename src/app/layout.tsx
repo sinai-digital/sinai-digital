@@ -44,21 +44,12 @@ export const metadata: Metadata = {
     title: 'Sinai Digital | Custom Websites for Small Businesses',
     description:
       'Custom, high-performance websites for small businesses. Professional web development, hosting, and ongoing support.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Sinai Digital - Custom Websites for Small Businesses',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sinai Digital | Custom Websites for Small Businesses',
     description:
       'Custom, high-performance websites for small businesses.',
-    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,

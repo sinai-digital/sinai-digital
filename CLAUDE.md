@@ -83,14 +83,18 @@ src/
 
 ## Portfolio Clients
 
-Golden City Gymnastics, Peak Insulation, Duffy's Grooming, Certified Sweeps
+Peak Insulation, Duffy's Grooming (client websites), Redeemer Church Directory (client web app),
+Proverbs Trading (our own product — a DBA of Sinai Digital LLC). Only live, real projects belong here —
+never unconverted proposal mockups.
 
 ## Key Conventions
 
 - All animations use `transform` + `opacity` only (GPU-composited)
 - `ScrollReveal` wrapper handles viewport-triggered animations
 - `prefers-reduced-motion: reduce` disables all animations
-- Iframes lazy-load via IO with 200px rootMargin; mobile shows placeholder
+- Portfolio previews are live iframes (lazy-loaded via IO, 200px rootMargin) unless the project sets `image` —
+  use a static screenshot for sites that send `X-Frame-Options: DENY` or sit behind a login
+- Link-preview image is `src/app/opengraph-image.png` (Next.js file convention)
 - Brand source assets in `brand/` — NOT deployed; web copies in `public/images/`
 - Lockups are composed in JSX (icon image + wordmark text), not baked into PNGs
 - Pricing is intentionally NOT public — the Approach section communicates project shapes without numbers, and the contact form drives tailored proposals
